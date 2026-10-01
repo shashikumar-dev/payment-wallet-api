@@ -1,0 +1,462 @@
+.action-page {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 48px 18px;
+    background: radial-gradient(circle at 15% 10%, #eef2ff 0, transparent 28%), var(--canvas)
+}
+
+.action-page-card {
+    width: min(100%, 620px);
+    padding: 34px;
+    border: 1px solid var(--line);
+    border-radius: 22px;
+    background: #fff;
+    box-shadow: var(--shadow)
+}
+
+.back-button,
+.details-back-button {
+    border: 0;
+    background: transparent;
+    color: var(--muted);
+    font-size: 11px;
+    font-weight: 750;
+    cursor: pointer
+}
+
+.back-button:hover,
+.details-back-button:hover {
+    color: var(--primary)
+}
+
+.action-page-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 25px 0 28px
+}
+
+.large-action-icon {
+    width: 52px;
+    height: 52px;
+    display: grid;
+    place-items: center;
+    flex: none;
+    border-radius: 16px;
+    background: linear-gradient(135deg, var(--primary-soft), #e0e7ff);
+    color: var(--primary);
+    font-size: 25px;
+    font-weight: 900
+}
+
+.action-page-header h1 {
+    font-size: 25px;
+    letter-spacing: -.5px;
+    margin: 4px 0
+}
+
+.action-page-header>div:last-child>p:last-child {
+    color: var(--muted);
+    font-size: 12px
+}
+
+.amount-field,
+.wallet-form-group {
+    margin: 20px 0
+}
+
+.amount-field>label,
+.wallet-form-group>label {
+    display: block;
+    margin-bottom: 8px;
+    color: #334155;
+    font-size: 12px;
+    font-weight: 800
+}
+
+.money-input {
+    display: flex;
+    align-items: center;
+    height: 62px;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: #fff;
+    overflow: hidden;
+    transition: .2s
+}
+
+.money-input:focus-within {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(79, 70, 229, .08)
+}
+
+.money-input>span {
+    padding-left: 18px;
+    color: #475569;
+    font-size: 22px;
+    font-weight: 700
+}
+
+.money-input input {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    outline: 0;
+    padding: 0 16px;
+    color: var(--text);
+    font-size: 24px;
+    font-weight: 800
+}
+
+.quick-amounts {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin: 12px 0 22px
+}
+
+.quick-amounts button {
+    padding: 9px 5px;
+    border: 1px solid var(--line);
+    border-radius: 9px;
+    background: #fff;
+    color: #475569;
+    font-size: 10px;
+    font-weight: 750;
+    cursor: pointer
+}
+
+.quick-amounts button:hover {
+    border-color: #c7d2fe;
+    background: var(--primary-soft);
+    color: var(--primary)
+}
+
+.info-box {
+    display: flex;
+    gap: 10px;
+    padding: 13px;
+    border-radius: 11px;
+    background: #f8fafc;
+    color: var(--muted);
+    font-size: 10px;
+    line-height: 1.55
+}
+
+.info-box span {
+    color: var(--primary);
+    font-weight: 800
+}
+
+.wallet-primary-button {
+    height: 50px;
+    margin-top: 22px
+}
+
+.recipient-search {
+    display: flex;
+    gap: 9px
+}
+
+.recipient-search input {
+    flex: 1;
+    height: 48px;
+    border: 1px solid var(--line);
+    border-radius: 11px;
+    padding: 0 13px;
+    outline: 0
+}
+
+.recipient-search input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(79, 70, 229, .08)
+}
+
+.find-user-button {
+    padding: 0 16px;
+    border: 0;
+    border-radius: 11px;
+    background: #0f172a;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 800;
+    cursor: pointer
+}
+
+.recipient-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px;
+    margin: 14px 0 4px;
+    border: 1px solid #bbf7d0;
+    border-radius: 13px;
+    background: #f0fdf4
+}
+
+.recipient-avatar,
+.counterparty-avatar {
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    flex: none;
+    border-radius: 12px;
+    background: #dcfce7;
+    color: #15803d;
+    font-weight: 900
+}
+
+.recipient-info {
+    min-width: 0;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 2px
+}
+
+.recipient-info strong {
+    font-size: 12px
+}
+
+.recipient-info span {
+    color: var(--muted);
+    font-size: 10px
+}
+
+.recipient-check {
+    width: 23px;
+    height: 23px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: #16a34a;
+    color: #fff;
+    font-size: 10px
+}
+
+.success-card {
+    text-align: center
+}
+
+.success-icon {
+    width: 62px;
+    height: 62px;
+    display: grid;
+    place-items: center;
+    margin: 5px auto 18px;
+    border-radius: 20px;
+    background: var(--success-soft);
+    color: var(--success);
+    font-size: 27px;
+    font-weight: 900
+}
+
+.success-card h1 {
+    font-size: 25px
+}
+
+.success-description {
+    color: var(--muted);
+    font-size: 12px;
+    margin: 8px 0 20px
+}
+
+.success-amount {
+    padding: 20px;
+    border-radius: 15px;
+    background: #f8fafc;
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--text);
+    margin-bottom: 18px
+}
+
+.success-text {
+    color: var(--muted);
+    font-size: 11px;
+    line-height: 1.6
+}
+
+.transfer-details {
+    margin: 18px 0;
+    padding: 14px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    text-align: left
+}
+
+.secondary-button {
+    width: 100%;
+    height: 46px;
+    margin-top: 10px;
+    border: 1px solid var(--line);
+    border-radius: 11px;
+    background: #fff;
+    color: #334155;
+    font-weight: 800;
+    cursor: pointer
+}
+
+@media(max-width:600px) {
+    .action-page {
+        align-items: start;
+        padding: 18px 12px
+    }
+
+    .action-page-card {
+        padding: 24px 18px;
+        border-radius: 18px
+    }
+
+    .action-page-header {
+        margin-top: 20px
+    }
+
+    .quick-amounts {
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    .recipient-search {
+        flex-direction: column
+    }
+
+    .find-user-button {
+        height: 44px
+    }
+}
+
+/* =========================================================
+   TRANSFER SUCCESS - PAYMENT DETAILS FIX
+   ========================================================= */
+
+/*
+ * Container for Recipient, WalletPay ID,
+ * Transfer ID and Status.
+ */
+.transfer-details {
+  margin-top: 16px;
+
+  overflow: hidden;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  text-align: left;
+}
+
+
+/*
+ * Each direct div represents one detail row.
+ *
+ * Example:
+ * Recipient                         Priya
+ * --------------------------------------
+ * WalletPay ID          priya@walletpay
+ */
+.transfer-details > div {
+  min-height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 24px;
+
+  padding: 13px 16px;
+
+  border-bottom: 1px solid #f1f5f9;
+}
+
+
+/* Remove border from final row */
+.transfer-details > div:last-child {
+  border-bottom: none;
+}
+
+
+/* Left-side label */
+.transfer-details > div > span {
+  flex-shrink: 0;
+
+  color: #64748b;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+
+/* Right-side value */
+.transfer-details > div > strong {
+  min-width: 0;
+
+  overflow: hidden;
+
+  color: #0f172a;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  text-align: right;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+/*
+ * WalletPay ID
+ *
+ * This assumes WalletPay ID is the second row
+ * in your existing JSX.
+ */
+.transfer-details > div:nth-child(2) > strong {
+  color: #4f46e5;
+}
+
+
+/*
+ * SUCCESS status
+ *
+ * This assumes Status is the fourth row
+ * in the existing JSX.
+ */
+.transfer-details > div:nth-child(4) > strong {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 5px 9px;
+
+  border-radius: 999px;
+
+  background: #dcfce7;
+  color: #15803d;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 0.4px;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .transfer-details > div {
+    min-height: 48px;
+
+    gap: 12px;
+
+    padding: 12px 14px;
+  }
+
+  .transfer-details > div > strong {
+    max-width: 62%;
+  }
+}
